@@ -1,5 +1,6 @@
 NAME
     Unicode::IMAPUtf7 - Perl extension to deal with IMAP UTF7
+    v 1.04
 
 SYNOPSIS
       use Unicode::IMAPUtf7;

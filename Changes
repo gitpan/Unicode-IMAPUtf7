@@ -1,5 +1,8 @@
 Revision history for Perl extension Unicode::IMAPUtf7.
 
+1.04  2002-04-08
+        - corrected a bug in the encoded function (thanks to saleem@diskonnet.com)
+
 1.03  2002-01-10
 	- add prerequisite in Makefile.PL
 

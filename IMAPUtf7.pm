@@ -10,7 +10,7 @@ require AutoLoader;
 
 @ISA = qw(Exporter AutoLoader);
 @EXPORT = qw(imap_utf7_decode imap_utf7_encode);
-$VERSION = '1.03';
+$VERSION = '1.04';
 
 sub imap_utf7_decode {
 	my ($s) = @_;
