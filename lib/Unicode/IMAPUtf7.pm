@@ -41,7 +41,7 @@ BEGIN {
 	%EXPORT_TAGS = (
 		'all' => [qw (imap_utf7_decode imap_utf7_encode)],
 	);
-	$VERSION = '1.99_1';
+	$VERSION = '2.00';
 }
 
 =head1 METHODS
@@ -206,9 +206,9 @@ Please check to see if your bug has already been reported.
 
 =head1 COPYRIGHT
 
-Copyright 2001-2003
+Copyright 2001-2004
 
-Fabien Potencier, cpan@zelab.net - http://cpan.zelab.net/
+Fabien Potencier, fabpot@cpan.org
 
 This software may be freely copied and distributed under the same
 terms and conditions as Perl.
