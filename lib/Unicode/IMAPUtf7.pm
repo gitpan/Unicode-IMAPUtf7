@@ -41,7 +41,7 @@ BEGIN {
 	%EXPORT_TAGS = (
 		'all' => [qw (imap_utf7_decode imap_utf7_encode)],
 	);
-	$VERSION = '1.99';
+	$VERSION = '1.99_1';
 }
 
 =head1 METHODS
@@ -195,6 +195,14 @@ is, a name that ends with a Unicode 16-bit octet MUST end with a "-
 
 For example, here is a mailbox name which mixes English, Japanese,
 and Chinese text: ~peter/mail/&ZeVnLIqe-/&U,BTFw-
+
+=head1 REQUESTS & BUGS
+
+Please report any requests, suggestions or bugs via the RT bug-tracking system 
+at http://rt.cpan.org/ or email to bug-Unicode-IMAPUtf7\@rt.cpan.org. 
+
+http://rt.cpan.org/NoAuth/Bugs.html?Dist=Unicode-IMAPUtf7 is the RT queue for Unicode::IMAPUtf7.
+Please check to see if your bug has already been reported. 
 
 =head1 COPYRIGHT
 

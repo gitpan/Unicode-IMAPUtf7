@@ -1,5 +1,8 @@
 Revision history for Perl extension Unicode::IMAPUtf7.
 
+1.99_1  2003-11-16
+	- added RT stuff in POD
+
 1.99  2003-11-16
 	- added a test suite (Test::More)
 	- added OO style
