@@ -1,5 +1,12 @@
 Revision history for Perl extension Unicode::IMAPUtf7.
 
+1.99  2003-11-16
+	- added a test suite (Test::More)
+	- added OO style
+	- new methods dealing with UTF8 strings instead of Latin1
+	- no auto export of functions
+	- updated documentation and README
+
 1.04  2002-04-08
         - corrected a bug in the encoded function (thanks to saleem@diskonnet.com)
 

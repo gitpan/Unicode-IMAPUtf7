@@ -1,6 +1,6 @@
 Changes
-IMAPUtf7.pm
+lib/Unicode/IMAPUtf7.pm
 MANIFEST
 Makefile.PL
-test.pl
+t/0-test.t
 README
