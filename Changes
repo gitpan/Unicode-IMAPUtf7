@@ -1,5 +1,7 @@
 Revision history for Perl extension Unicode::IMAPUtf7.
 
+2.01	2004-08-29
+	- fix bug #6909 : single + and & signs are encoded as the same sequence
 2.00	2004-04-07
 	- no functionnal or code change
 	- change email address

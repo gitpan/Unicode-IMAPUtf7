@@ -41,7 +41,7 @@ BEGIN {
 	%EXPORT_TAGS = (
 		'all' => [qw (imap_utf7_decode imap_utf7_encode)],
 	);
-	$VERSION = '2.00';
+	$VERSION = '2.01';
 }
 
 =head1 METHODS
@@ -113,9 +113,11 @@ sub _imap_utf7_decode {
 	# On remplace , par / dans les BASE 64 (, entre & et -)
 	# On remplace les &, non suivi d'un - par +
 	# On remplace les &- par &
+	$s =~ s/\+/PLUSPLACEHOLDER/g;
 	$s =~ s/&([^,&\-]*),([^,\-&]*)\-/&$1\/$2\-/g;
 	$s =~ s/&(?!\-)/\+/g;
 	$s =~ s/&\-/&/g;
+	$s =~ s/PLUSPLACEHOLDER/+-/g;
 
 	return $s;
 }
@@ -133,9 +135,11 @@ sub imap_utf7_encode {
 sub _imap_utf7_encode {
 	my ($s) = @_;
 
+	$s =~ s/\+\-/PLUSPLACEHOLDER/g;
 	$s =~ s/\+([^\/&\-]*)\/([^\/\-&]*)\-/\+$1,$2\-/g;
 	$s =~ s/&/&\-/g;
 	$s =~ s/\+([^+\-]+)?\-/&$1\-/g;
+	$s =~ s/PLUSPLACEHOLDER/+/g;
 
 	return $s;
 }
