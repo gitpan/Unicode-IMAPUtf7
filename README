@@ -1,0 +1,23 @@
+NAME
+    Unicode::IMAPUtf7 - Perl extension to deal with IMAP UTF7
+
+SYNOPSIS
+      use Unicode::IMAPUtf7;
+      print Unicode::IMAPUtf7::imap_utf7_encode('Répertoire');
+      print Unicode::IMAPUtf7::imap_utf7_decode('R&AOk-pertoire');
+
+DESCRIPTION
+    IMAP mailbox names are encoded in a modified UTF7 when names contains
+    international characters outside of the printable ASCII range. The
+    modified UTF-7 encoding is defined in RFC2060 (section 5.1.3).
+
+    imap_utf7_encode: returns the modified UTF7-text for a string in Latin1.
+
+    imap_utf7_decode: returns the decoded string into Latin1 data.
+
+AUTHOR
+    Fabien Potencier, cpan@zelab.net - http://cpan.zelab.net/
+
+SEE ALSO
+    perl(1), Unicode::String.
+
