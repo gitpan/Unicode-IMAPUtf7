@@ -10,7 +10,7 @@ require AutoLoader;
 
 @ISA = qw(Exporter AutoLoader);
 @EXPORT = qw(imap_utf7_decode imap_utf7_encode);
-$VERSION = '1.02';
+$VERSION = '1.03';
 
 sub imap_utf7_decode {
 	my ($s) = @_;
@@ -31,7 +31,7 @@ sub imap_utf7_encode {
 
 	$s = Unicode::String::latin1($s)->utf7;
 
-	$s =~ s/\+([^\/&\-]*)\/([^\/\-&]*)\-/&$1,$2\-/g;
+	$s =~ s/\+([^\/&\-]*)\/([^\/\-&]*)\-/\+$1,$2\-/g;
 	$s =~ s/&/&\-/g;
 	$s =~ s/\+([^+\-]+)?\-/&$1\-/g;
 

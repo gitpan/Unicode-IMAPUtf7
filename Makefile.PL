@@ -4,4 +4,6 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     'NAME'	=> 'Unicode::IMAPUtf7',
     'VERSION_FROM' => 'IMAPUtf7.pm', # finds $VERSION
+    'PREREQ_PM'     => { 'Unicode::String' => 0 },
+    'dist'          => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
 );
